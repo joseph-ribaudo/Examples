@@ -13,23 +13,28 @@
 import numpy as np
 import ann
 
+### Define Global Variables ###
+
+# Data #
+X = np.array(([0,0],
+              [0,1],
+              [1,0],
+              [1,1]), dtype=float)
+
+y = np.array(([0],
+              [0],
+              [0],
+              [1]), dtype=float)
+
+# Normalize Data #
+#X = X/np.amax(X, axis=0)
+#y = y/100
+
 # Main #
 def main():
-    # Define Data #
-    X = np.array(([0,0],
-                  [0,1],
-                  [1,0],
-                  [1,1]), dtype=float)
-    y = np.array(([0],
-                  [0],
-                  [0],
-                  [1]), dtype=float)
-
-    # Normalize Data #
-    #X = X/np.amax(X, axis=0)
-    #y = y/100
-
-    # Test Neural Network #
+    '''
+    Function: Main Execution Function - Run Neural Network
+    '''
     NN = ann.Neural_Network()
     yHat = NN.forward(X)
     print yHat

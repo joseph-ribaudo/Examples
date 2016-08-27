@@ -11,7 +11,12 @@
 
 # Import Libraries #
 import numpy as np
-import matplotlib.pyplot as plt
+import warnings;
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore");
+    import matplotlib.pyplot as plt
+
+#import matplotlib.pyplot as plt
 
 # Define Global Variables #
 x = np.arange(-6., 6., 0.1)

@@ -36,7 +36,9 @@ class Neural_Network(object):
         # ** Note that these weights are initially randomized ** #
 
     def forward(self, X):
-        # Propagate inputs through our network #
+        '''
+        Method: Forward Propagation - Propagate inputs through our network
+        '''
         self.z2 = np.dot(X, self.W1)
         self.a2 = self.sigmoid(self.z2)
         self.z3 = np.dot(self.a2, self.W2)
@@ -44,5 +46,7 @@ class Neural_Network(object):
         return yHat
 
     def sigmoid(self, z):
-        # Apply sigmoid activation function to scalar, vector or matrix #
+        '''
+        Method: Sigmoid Activation Function - Apply sigmoid activation function to scalar, vector or matrix
+        '''
         return 1 / (1 + np.exp(-z))
